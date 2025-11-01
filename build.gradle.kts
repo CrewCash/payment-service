@@ -28,15 +28,21 @@ val testcontainersVersion: String by project
 val testKeycloakVersion: String by project
 
 dependencies {
+	// Spring Boot
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
 	implementation("org.springframework.boot:spring-boot-starter-data-r2dbc")
 	implementation("org.springframework.boot:spring-boot-starter-oauth2-resource-server")
 	implementation("org.springframework.boot:spring-boot-starter-validation")
 	implementation("org.springframework.boot:spring-boot-starter-webflux")
+
+	// Spring Cloud
 	implementation("org.springframework.cloud:spring-cloud-starter-config")
 	implementation("org.springframework.cloud:spring-cloud-stream-binder-rabbit")
+
+	// Utilities
 	implementation("org.springframework.retry:spring-retry")
 
+	// Runtime
 	runtimeOnly("io.micrometer:micrometer-registry-prometheus")
 	runtimeOnly("io.opentelemetry.javaagent:opentelemetry-javaagent:$otelVersion")
 	runtimeOnly("org.flywaydb:flyway-core")
@@ -48,6 +54,7 @@ dependencies {
 	// runtimeOnly("io.netty:netty-resolver-dns-native-macos:4.1.101.Final:osx-aarch_64")
 	annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
 
+	// Test
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.security:spring-security-test")
 	testImplementation("io.projectreactor:reactor-test")
