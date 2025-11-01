@@ -36,7 +36,6 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-webflux")
 
 	// Spring Cloud
-	implementation("org.springframework.cloud:spring-cloud-starter-config")
 	implementation("org.springframework.cloud:spring-cloud-stream-binder-rabbit")
 
 	// Utilities
@@ -55,6 +54,7 @@ dependencies {
 	annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
 
 	// Test
+	testImplementation("io.r2dbc:r2dbc-h2")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.security:spring-security-test")
 	testImplementation("io.projectreactor:reactor-test")
