@@ -1,0 +1,19 @@
+crewcash:
+  wallet-service-uri: http://wallet-service
+  sharing-service-uri: http://sharing-service
+spring:
+  flyway:
+    url: jdbc:postgresql://crewcash-postgres/crewcashdb_payment
+  r2dbc:
+    url: r2dbc:postgresql://crewcash-postgres/crewcashdb_payment
+  rabbitmq:
+    host: payment-rabbitmq
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://crewcash-keycloak/realms/CrewCash
+app:
+  rabbit:
+    exchange: payment.exchange
+    exchange-type: fanout
