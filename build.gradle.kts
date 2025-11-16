@@ -2,6 +2,9 @@ plugins {
 	java
 	id("org.springframework.boot") version "3.5.7"
 	id("io.spring.dependency-management") version "1.1.7"
+	id("checkstyle")
+	id("pmd")
+	id("com.github.spotbugs") version "5.2.3"
 }
 
 group = "com.crewcash"
@@ -80,4 +83,17 @@ tasks.withType<Test> {
 
 tasks.named<Jar>("jar") {
     enabled = false
+}
+
+checkstyle {
+    toolVersion = "10.15.0"
+    configFile = file("${rootProject.projectDir}/config/checkstyle/checkstyle.xml")
+}
+
+pmd {
+    toolVersion = "7.16.0"
+}
+
+spotbugs {
+    toolVersion = "4.8.3"
 }
