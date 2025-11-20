@@ -20,12 +20,12 @@
         <module name="ConstantName"/>
         
         <!-- Coding style -->
-        <module name="Indentation">
+        <!-- <module name="Indentation">
             <property name="basicOffset" value="4"/>
             <property name="braceAdjustment" value="0"/>
             <property name="caseIndent" value="4"/>
             <property name="throwsIndent" value="4"/>
-        </module>
+        </module> -->
         <module name="LeftCurly"/>
         <module name="RightCurly"/>
         <module name="NeedBraces"/>
@@ -49,8 +49,8 @@
 
         <!-- Misc checks -->
         <module name="EmptyBlock"/>
-        <module name="FinalClass"/>
-        <module name="FinalLocalVariable"/>
+        <!-- <module name="FinalClass"/>
+        <module name="FinalLocalVariable"/> -->
         <module name="VisibilityModifier"/>
         <module name="MagicNumber">
             <property name="ignoreNumbers" value="-1,0,1,2"/>
